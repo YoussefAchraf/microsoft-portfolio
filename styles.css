@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color .3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+#about-me p {
+    font-size: 1.1rem;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+#projects h2 {
+    width: 100%;
+}
+
+article {
+    flex: 1 1 350px;
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+article h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+figcaption {
+    margin: .8rem 0;
+    color: #666;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills li {
+    margin-bottom: 12px;
+}
+
+#skills li::before {
+    content: "✔ ";
+    color: green;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: .8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1f2937;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+@media (max-width:768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        margin: 1rem auto;
+    }
+}
